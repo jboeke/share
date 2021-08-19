@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <title>Things from Kathleen and 810 Boone Street</title>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="skeleton.css">
+    <style>
+      .anitem {
+        margin-bottom: 50px;
+      }
+
+      .anitem img {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+      <h2>Things from Kathleen and 810 Boone Street</h2>
+      <p>Click an image to make it bigger.</p>
+    </div>
+    <div class="container allthethings">
+      
+    </div>
+
+  </body>
+</html>
+<script>
+  var filenames = [
+  'IMG_2862.JPG',
+  'IMG_2863.JPG',
+  'IMG_2864.JPG',
+  'IMG_2876.JPG',
+  'IMG_2877.JPG',
+  'IMG_2917.JPG',
+  'IMG_2922.JPG',
+  'IMG_2982.JPG',
+  'IMG_2983.JPG',
+  'IMG_2984.JPG',
+  'IMG_2985.JPG',
+  'IMG_2986.JPG',
+  'IMG_2989.JPG',
+  'IMG_2991.JPG',
+  'IMG_2993.JPG',
+  'IMG_2995.JPG',
+  'IMG_3004.JPG',
+  'IMG_3006.JPG',
+  'IMG_3008.JPG',
+  'IMG_3022.JPG',
+  'IMG_3023.JPG',
+  'IMG_3024.JPG',
+  'IMG_3025.JPG',
+  'IMG_3029.JPG',
+  'IMG_3033.JPG',
+  'IMG_3034.JPG',
+  'IMG_3037.JPG',
+  'IMG_3040.JPG',
+  'IMG_3042.JPG',
+  'IMG_3044.JPG',
+  'IMG_3131.JPG',
+  'IMG_3132.JPG',
+  'IMG_3133.JPG',
+  'IMG_3134.JPG',
+  'IMG_3157.jpg',
+  'IMG_3159.JPG',
+  'IMG_3206.JPG',
+  'IMG_3272.JPG',
+  'IMG_3273.JPG',
+  'IMG_3276.JPG',
+  ];
+
+  var imagecontainer = document.getElementsByClassName("allthethings")[0];
+
+  filenames.forEach(function(element) {
+    //var text = document.createTextNode('<a>' + element + '</a>');
+    var text = "<div class='container anitem'><a href='" + element + "' target='_blank'><p>" + element + "</p><img src='" + element + "' /></a></div>";
+    imagecontainer.insertAdjacentHTML('beforeend', text);
+  });
+</script>
